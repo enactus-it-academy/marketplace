@@ -202,6 +202,15 @@ option {
   right: 1em; */
   font-size: 10pt;
 }
+.info{
+  margin: 0;
+  padding: 0;
+}
+.info li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 600;
+}
 
 .box:hover .right{
   -webkit-transition: all 0.4s cubic-bezier(.99,.99,0,.61);
@@ -213,3 +222,43 @@ option {
 }
 
 
+@media(max-width: 440px){
+  .header{
+    flex-direction: column-reverse;
+    height: 146px;
+    padding-top: 10px;
+  }
+  .header__left{
+    flex-direction: column;
+    height: 105px;
+    justify-content: space-around;
+  }
+  .header__left-logo{
+    padding: 0;
+    border: none;
+  }
+  .header__right{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative
+  }
+  .header__left-about{
+    margin: 0;
+  }
+  .contact-info{
+    flex-direction: column;
+  }
+  .contact-info__left{
+    margin-bottom: 20px;
+  }
+  .contact-info__right{
+    width: 100%;
+    text-align: center;
+  }
+  .products{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
