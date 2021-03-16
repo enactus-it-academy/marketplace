@@ -155,7 +155,7 @@ option {
   position: absolute;
   top: 14px;
   right: 8px;
-  background-image: url(/images/HeartStraight.svg);
+  background-image: url(./images/HeartStraight.svg);
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -164,7 +164,7 @@ option {
   transition: all .5s linear;
 }
 .active{
-  background-image: url(/images/HeartStraight2.svg);
+  background-image: url(./images/HeartStraight2.svg);
 }
 /* .title::after{
   content: '';
