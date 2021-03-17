@@ -6,11 +6,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('f2334tf334fjJhu7vGF78hkfn3')
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -58,8 +58,8 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'marketplace_db',
-        'USER': 'it_academy',
+        'NAME': '',
+        'USER': '',
         'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
         'HOST': '',
         'PORT': '',
