@@ -6,11 +6,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '3wefa4F3fUY6F&fUILKJFERFE43FEFDfsrrveGEr4ees'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -21,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'catalog'
 ]
 
 MIDDLEWARE = [
@@ -58,11 +60,11 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'marketplace_db',
-        'USER': 'it_academy',
-        'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
-        'HOST': '',
-        'PORT': '',
+        'NAME': 'catalog',
+        'USER': 'cataloger',
+        'PASSWORD': '19966991Qq',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
