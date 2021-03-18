@@ -1,14 +1,22 @@
 import os
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_value(env_variable):
+    try:
+        return os.environ[env_variable]
+    except KeyError:
+        error_msg = 'Set the {} environment variable'.format(env_variable)
+        raise ImproperlyConfigured(error_msg)
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
+SECRET_KEY = get_env_value('SECRET_KEY')
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-
-DEBUG = True
+DEBUG = get_env_value('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -66,9 +74,9 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'marketplace_db',
-        'USER': 'it_academy',
-        'PASSWORD': os.getenv('POSTGRESQL_PASSWORD'),
+        'NAME': get_env_value('POSTGRESQL_NAME'),
+        'USER': get_env_value('POSTGRESQL_USER'),
+        'PASSWORD': get_env_value('POSTGRESQL_PASSWORD'),
         'HOST': '',
         'PORT': '',
     }
