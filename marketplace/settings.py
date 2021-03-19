@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
 
+    'catalog',
     'user_account',
 
     'phonenumber_field',
