@@ -4,9 +4,9 @@ from .models import User, Supplier
 
 
 @admin.register(Supplier)
-class ProfileAdmin(admin.ModelAdmin):
+class SupplierAdmin(admin.ModelAdmin):
     model = Supplier
-    list_display = ['user', 'description', 'phone_number', 'social_networks']
+    list_display = ['user', 'phone_number', 'social_networks']
 
 
 @admin.register(User)

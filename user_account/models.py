@@ -18,6 +18,9 @@ class Supplier(models.Model):
     phone_number = PhoneNumberField('Номер телефона', blank=True)
     social_networks = models.CharField('Социальные сети', max_length=255, blank=True)
 
+    def __str__(self):
+        return self.user.get_full_name()
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
