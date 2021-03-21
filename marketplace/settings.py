@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
     'catalog',
     'user_account',
+    'communication',
 
     'phonenumber_field',
 
